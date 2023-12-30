@@ -1,13 +1,17 @@
-import React, { useState } from "react";
-// import Count from "./components/count";
-// import List from "./components/List";
-import List2 from "./components/List2";
+import Todo from "./components/assignment/Todo";
+// import Count from "./components/session/Count";
+// import List from "./components/session/List";
+// import List2 from "./components/session/List2";
+
 
 const App = () => {
-  return(
-    // <Count />
-    // <List />
-    <List2 />
+  return (
+    <div className="bg-primary">
+      {/* <Count />
+    <List />
+    <List2 /> */}
+      <Todo />
+    </div>
   )
 }
 

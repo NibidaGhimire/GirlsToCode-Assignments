@@ -22,6 +22,11 @@ const List2 = () => {
         setList([...list, naam]);
         setNaam({fullname:"",age:""});
     }
+
+
+
+    
+
     return (
         <form>
             <div>
@@ -44,7 +49,12 @@ const List2 = () => {
 
             <ul>
                 {list.map((lis, index) => (
-                    <li key={index}>{lis.fullname},{lis.age}</li>
+                    <div key={index}>
+                        <li >
+                            {lis.fullname},{lis.age}
+                            <button onClick={()=>handleDel(index)}>Del</button>
+                        </li>
+                    </div>
                 ))}
             </ul>
 
