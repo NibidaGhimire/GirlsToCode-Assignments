@@ -98,13 +98,19 @@ const Todo = () => {
                     >
                         <div
                             className='flex flex-row items-center'
+
                         >
-                            <li
-                                onClick={() => handleStriked(index)}
-                                className={`${!lis.striked ? "cursor:pointer" : "line-through"} flex-[0.7] text-[24px] cursor-pointer`}
-                            >
-                                {index + 1}. {lis.mytodo}
-                            </li>
+                            <div className='flex-[0.7] flex flex-row gap-2 items-center'>
+                                <input type='checkbox' 
+                                    onClick={() => handleStriked(index)}
+                                    className='cursor-pointer h-4 w-4'
+                                />
+                                <li
+                                    className={`${!lis.striked ? "" : "line-through text-green-500"}  text-[24px] cursor-default`}
+                                >
+                                    {lis.mytodo}
+                                </li>
+                            </div>
 
                             <div className='flex flex-row gap-8 flex-[0.3]'>
                                 <button
